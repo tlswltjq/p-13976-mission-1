@@ -4,8 +4,8 @@ import org.example.wisesaying.command.*
 
 data class WiseSaying(
     val id: Int,
-    val content: String,
-    val author: String
+    var content: String,
+    var author: String
 )
 
 fun run() {
@@ -18,6 +18,7 @@ fun run() {
         "종료" to ExitCommand { isExit = true },
         "목록" to ShowListCommand(),
         "삭제" to DeleteCommand(),
+        "수정" to ModifyCommand(),
     )
 
     while (!isExit) {
