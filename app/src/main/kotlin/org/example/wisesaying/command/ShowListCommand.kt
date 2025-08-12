@@ -10,6 +10,6 @@ class ShowListCommand : Command {
         println("-----------------------")
         WiseSayingRepository.getAll().forEach { wiseSaying ->
             println("${wiseSaying.id} / ${wiseSaying.author} / \"${wiseSaying.content}\"")
-        }Q
+        }
     }
 }
