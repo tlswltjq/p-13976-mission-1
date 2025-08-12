@@ -3,6 +3,7 @@ package org.example.wisesaying
 import org.example.wisesaying.command.Command
 import org.example.wisesaying.command.RegisterCommand
 import org.example.wisesaying.command.ExitCommand
+import org.example.wisesaying.command.ShowListCommand
 
 data class WiseSaying(
     val id: Int,
@@ -17,7 +18,8 @@ fun run() {
 
     val commands = mapOf<String, Command>(
         "등록" to RegisterCommand(),
-        "종료" to ExitCommand { isExit = true }
+        "종료" to ExitCommand { isExit = true },
+        "목록" to ShowListCommand()
     )
 
     while (!isExit) {
