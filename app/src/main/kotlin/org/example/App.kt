@@ -3,13 +3,9 @@
  */
 package org.example
 
-class App {
-    val greeting: String
-        get() {
-            return "Hello World!"
-        }
-}
+import org.example.wisesaying.run
 
 fun main() {
-    println(App().greeting)
+    run();
 }
+
